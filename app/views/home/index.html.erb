@@ -1,4 +1,11 @@
 <h3>Home</h3>
 <% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+  <% if user.profile %>
+    <p>User: <%=link_to user.name, profile_path(user) %></p>
+  <% else %>
+  	<p>User: <%= user.name %></p>
+  <% end %>
+<% end %>
+<% if user_signed_in? && !(current_user.profile) %>
+  <div class="btn"><%= link_to 'Create profile!', 'profiles/new' %></div>
 <% end %>
