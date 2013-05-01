@@ -47,3 +47,5 @@ gem "devise", ">= 2.2.3"
 gem "cancan", ">= 1.6.9"
 gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.1.0"
+gem "figaro", ">= 0.6.3"
+gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
